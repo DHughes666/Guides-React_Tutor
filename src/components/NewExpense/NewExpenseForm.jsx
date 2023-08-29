@@ -14,25 +14,40 @@ const NewExpenseForm = () => {
 
     const handleTitleChange = (event) => {
         const value = event.target.value
-        setUserInput({
-            ...userInput,
-            title: value,
+        // setUserInput({
+        //     ...userInput,
+        //     title: value,
+        // });
+        setUserInput((prevState) => {
+            return {
+                ...prevState, title: value
+            }
         });
     }
 
     const handleAmountChange = (event) => {
         const value = event.target.value
-        setUserInput({
-            ...userInput,
-            amount: value,
+        // setUserInput({
+        //     ...userInput,
+        //     amount: value,
+        // });
+        setUserInput((prevState) => {
+            return {
+                ...prevState, amount: value
+            }
         });
     }
 
     const handleDateChange = (event) => {
         const value = event.target.value
-        setUserInput({
-            ...userInput,
-            date: value,
+        // setUserInput({
+        //     ...userInput,
+        //     date: value,
+        // });
+        setUserInput((prevState) => {
+            return {
+                ...prevState, date: value
+            }
         });
     }
 
