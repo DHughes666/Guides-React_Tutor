@@ -57,7 +57,8 @@ const NewExpenseForm = (props) => {
         const expenseData = {
             title: userInput.title,
             amount: userInput.amount,
-            date: userInput.date
+            // When adding dates please dont forget to use the 'new Date' 
+            date: new Date(userInput.date)
         }
 
         props.onSave(expenseData);

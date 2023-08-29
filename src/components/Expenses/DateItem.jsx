@@ -1,10 +1,11 @@
 import React from "react";
+import moment from "moment";
 import './DateItem.css';
 
 const DateItem = (props) => {
-    const month = props.Ndate.toLocaleString('en-US', {month: 'long'});
-    const day = props.Ndate.toLocaleString('en-US', {day: '2-digit'});
-    const year = props.Ndate.getFullYear();
+    const month = props.date.toLocaleString('en-US', {month: 'long'});
+    const day = props.date.toLocaleString('en-US', {day: '2-digit'});
+    const year = props.date.getFullYear();
 
     return (
         <div className="expense-date">

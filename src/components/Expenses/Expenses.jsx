@@ -17,9 +17,9 @@ const Expenses = (props) => {
 
             {props.stuffs.map((stuff) => {
                 return <ExpenseItem
-                date = {stuff.date}
                 title = {stuff.title}
-                amount = {stuff.amount} />
+                amount = {stuff.amount}
+                date = {stuff.date} />
             })
             }
         </Card> 
