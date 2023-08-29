@@ -5,7 +5,7 @@ import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
 
-    let [title, setTitle] = useState(props.title)
+    const [title, setTitle] = useState(props.title);
 
     const handleClick = () => {
         setTitle("Changed");
