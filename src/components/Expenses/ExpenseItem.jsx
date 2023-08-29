@@ -1,7 +1,7 @@
 import React from "react";
 import './ExpenseItem.css';
 import DateItem from "./DateItem";
-import Card from "./Card";
+import Card from "../UI/Card";
 
 function ExpenseItem(props) {
     
