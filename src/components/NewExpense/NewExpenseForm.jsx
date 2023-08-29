@@ -51,7 +51,19 @@ const NewExpenseForm = () => {
         });
     }
 
-    return <form>
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const expenseData = {
+            title: userInput.title,
+            amount: userInput.amount,
+            date: userInput.date
+        }
+
+        console.log(expenseData);
+    }
+
+    return <form onSubmit={handleSubmit}>
         <div className="new-expense__controls">
             <div className="new-expense__control">
                 <label>Title</label>
@@ -63,7 +75,7 @@ const NewExpenseForm = () => {
                 <label>Amount</label>
                 <input type="number" min="0.01" step='0.01' 
                     onChange={handleAmountChange} value={userInput.amount} />
-                />
+                
             </div>
             <div className="new-expense__control">
                 <label>Date</label>
