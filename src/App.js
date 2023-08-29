@@ -15,12 +15,12 @@ const App = () => {
       
     })
   }
+
   
   return (
     <div>
       <NewExpense onAddExpense={handlerForAddExpense} />
       <Expenses stuffs = {presentData}/>
-      
     </div>
   );
 }
