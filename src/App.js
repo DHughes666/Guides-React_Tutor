@@ -13,7 +13,7 @@ function App() {
       id: 'e3',
       title: 'Macbook Pro',
       amount: 1264.07,
-      date: new Date(2021, 2, 28),
+      date: new Date(),
     },
     {
       id: 'e4',
@@ -27,7 +27,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      <Expenses expenses = {expenses}/>
+      <Expenses stuffs = {expenses}/>
       
     </div>
   );
