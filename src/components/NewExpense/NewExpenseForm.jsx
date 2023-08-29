@@ -2,25 +2,38 @@ import React, { useState } from "react";
 import './NewExpenseForm.css';
 
 const NewExpenseForm = () => {
-    const [title, setTitle] = useState('')
-    const [amount, setAmount] = useState('')
+    // const [title, setTitle] = useState('')
+    // const [amount, setAmount] = useState('')
+    // const [date, setDate] = useState('')
 
-    const defDate = new Date()
-    const [date, setDate] = useState(defDate)
+    const [userInput, setUserInput] = useState({
+        title: '',
+        amount: '',
+        date: '',
+    })
 
     const handleTitleChange = (event) => {
         const value = event.target.value
-        setTitle(value);
+        setUserInput({
+            ...userInput,
+            title: value,
+        });
     }
 
     const handleAmountChange = (event) => {
         const value = event.target.value
-        setAmount(value);
+        setUserInput({
+            ...userInput,
+            amount: value,
+        });
     }
 
     const handleDateChange = (event) => {
         const value = event.target.value
-        setDate(value);
+        setUserInput({
+            ...userInput,
+            date: value,
+        });
     }
 
     return <form>
@@ -28,19 +41,19 @@ const NewExpenseForm = () => {
             <div className="new-expense__control">
                 <label>Title</label>
                 <input type="text" onChange={handleTitleChange}
-                value={title}
+                value={userInput.title}
                 />
             </div>
             <div className="new-expense__control">
                 <label>Amount</label>
                 <input type="number" min="0.01" step='0.01' 
-                    onChange={handleAmountChange} value={amount}
+                    onChange={handleAmountChange} value={userInput.amount} />
                 />
             </div>
             <div className="new-expense__control">
                 <label>Date</label>
                 <input type="date" min="2022-01-01" max="2024-12-31"
-                onChange={handleDateChange} value={date.toISOString().split('T')[0]} />
+                onChange={handleDateChange} value={userInput.date} />
             </div>
         </div>
         <div className="new-expense__actions">
